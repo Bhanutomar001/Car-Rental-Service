@@ -132,7 +132,7 @@
         <button type="submit">Login Here</button>
 
         <div class="signup-link">
-            Don't have an account? <a href="userSignup.jsp">Register Here</a>
+            Don't have an account? <a href="signup">Register Here</a>
         </div>
 
     </form>
