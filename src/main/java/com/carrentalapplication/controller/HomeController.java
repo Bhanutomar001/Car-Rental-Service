@@ -13,13 +13,15 @@ public class HomeController {
 
     @GetMapping("/signup")
     public String signupController() {
+
         return "userSignup";
     }
 
 
     @GetMapping("/login")
     public String loginController() {
-        return "userlogin";
+
+        return "userLogin";
     }
 
 
