@@ -26,7 +26,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 700px; /* Do boxes ke liye perfect width */
+            max-width: 700px;
         }
 
         h2 {
@@ -37,21 +37,18 @@
             font-weight: 700;
         }
 
-        /* Yeh row dono boxes ko ek line me lata hai */
         .form-row {
             display: flex;
             gap: 20px;
             margin-bottom: 18px;
         }
 
-        /* Har box ko barabar 50%-50% space deta hai */
         .form-group {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        /* Sirf Address ke liye full width */
         .full-width {
             width: 100%;
             margin-bottom: 18px;
@@ -64,10 +61,12 @@
             font-weight: 600;
         }
 
+
         input[type="text"],
         input[type="email"],
         input[type="password"],
-        input[type="date"] {
+        input[type="date"],
+        select {
             width: 100%;
             padding: 11px 14px;
             border: 1px solid #ccc;
@@ -76,9 +75,10 @@
             outline: none;
             transition: all 0.3s ease;
             background: #fcfcfc;
+            height: 46px;
         }
 
-        input:focus {
+        input:focus, select:focus {
             border-color: #007bff;
             box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
             background: #fff;
@@ -113,29 +113,29 @@
         <div class="form-row">
             <div class="form-group">
                 <label>First Name</label>
-                <input type="text" name="fname" placeholder="Enter first name" required>
+                <input type="text" name="firstName" placeholder="Enter first name" required>
             </div>
             <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" name="lname" placeholder="Enter last name" required>
+                <input type="text" name="lastName" placeholder="Enter last name" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="example@gmail.com" required>
+                <input type="email" name="emailId" placeholder="example@gmail.com">
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="••••••••" required>
+                <input type="password" name="password" placeholder="••••••••">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group">
                 <label>Mobile Number</label>
-                <input type="text" name="mobilenumber" placeholder="9876543210" required>
+                <input type="text" name="mobNo" placeholder="9876543210" required>
             </div>
             <div class="form-group">
                 <label>Date of Birth</label>
@@ -160,6 +160,12 @@
                 <input type="text" name="pincode" placeholder="452001" required>
             </div>
             <div class="form-group">
+                <label>User Type</label>
+                <select name="userType" required>
+                    <option value="" disabled selected>Select User Type</option>
+                    <option value="Visitor">Visitor</option>
+                    <option value="Hoster">Hoster</option>
+                </select>
             </div>
         </div>
 

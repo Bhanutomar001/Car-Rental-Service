@@ -30,7 +30,6 @@
             text-align: center;
         }
 
-        /* Premium Car Rental Brand Header */
         .welcome-container h4 {
             color: #7f8c8d;
             font-size: 14px;
@@ -48,7 +47,6 @@
             line-height: 1.2;
         }
 
-        /* Button Wrappers */
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -56,7 +54,6 @@
             margin-top: 20px;
         }
 
-        /* Common Button Styles */
         .btn {
             display: block;
             padding: 14px;
@@ -68,7 +65,6 @@
             text-align: center;
         }
 
-        /* Signup Button (Primary) */
         .btn-signup {
             background: #007bff;
             color: white;
@@ -82,7 +78,6 @@
             box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
         }
 
-        /* Login Button (Outline style) */
         .btn-login {
             background: transparent;
             color: #007bff;

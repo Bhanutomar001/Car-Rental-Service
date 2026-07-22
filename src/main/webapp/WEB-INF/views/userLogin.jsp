@@ -26,7 +26,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 650px; /* Width ko registration page jitna rakha h taaki symmetry bani rahe */
+            max-width: 650px;
         }
 
         h2 {
@@ -37,7 +37,6 @@
             font-weight: 700;
         }
 
-        /* Dono boxes ko ek line me lane ke liye */
         .form-row {
             display: flex;
             gap: 20px;
