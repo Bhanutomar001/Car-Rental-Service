@@ -1,5 +1,6 @@
 package com.carrentalapplication.dto;
 import lombok.*;
+import org.springframework.context.annotation.Bean;
 
 @Data
 @NoArgsConstructor
