@@ -27,4 +27,8 @@ public class HomeController {
         return "userLogin";
     }
 
+        @GetMapping("/carReg")
+        public String showCarRegistrationPage() {
+            return "addCar";
+        }
 }

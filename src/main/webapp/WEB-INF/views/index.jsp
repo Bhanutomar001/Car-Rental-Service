@@ -101,7 +101,6 @@
 
         <a href="login" class="btn btn-login">Login Here</a>
 
-        <a href="car" class="btn btn-login">Enter to car detail</a>
 
     </div>
 </div>
