@@ -18,16 +18,10 @@ public class contollers {
     public String userSignup(@ModelAttribute UserSignupRequest request) {
         System.out.println("Received First Name: " + request.getFirstName());
         signupservice.signup(request);
-        return "redirect:/login";
-    }
 
-
-    @PostMapping("/carReg")
-    public String carRegistration(@ModelAttribute CarRegistration carInfo) {
-         //signupservice.signup(carInfo);
-
-       // if("Hoster".equalsIgnoreCase(carInfo.getUserType())) {
+        if ("Hoster".equalsIgnoreCase(request.getUserType())) {
             return "redirect:/carReg";
         }
-
-}
+            return "redirect:/login";
+        }
+    }
