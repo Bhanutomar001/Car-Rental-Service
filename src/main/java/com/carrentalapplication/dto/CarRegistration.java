@@ -1,14 +1,19 @@
 package com.carrentalapplication.dto;
 
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+@Entity
+@Table(name = "carInfo")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class CarRegistration {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
     public String carBrand;
     public String modelName;
     public String vehicleType;

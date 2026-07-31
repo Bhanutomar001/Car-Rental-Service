@@ -196,7 +196,6 @@
 
     <form action="carReg" method="post" class="form-body">
 
-        <!-- Section 1: Basic Details -->
         <div class="section-header">
             <i class="fa-solid fa-car"></i> Basic Details
         </div>
@@ -251,7 +250,6 @@
             </div>
         </div>
 
-        <!-- Section 2: Technical Details -->
         <div class="section-header">
             <i class="fa-solid fa-sliders"></i> Technical Details
         </div>
@@ -302,7 +300,6 @@
             </div>
         </div>
 
-        <!-- Section 3: Legal Details -->
         <div class="section-header">
             <i class="fa-solid fa-file-contract"></i> Legal & Registration Details
         </div>
@@ -333,7 +330,6 @@
             </div>
         </div>
 
-        <!-- Section 4: Driver Details -->
         <div class="section-header">
             <i class="fa-solid fa-user-gear"></i> Driver Details
         </div>
@@ -364,7 +360,6 @@
             </div>
         </div>
 
-        <!-- Submit Button -->
         <button type="submit" class="btn-submit">
             <span>Register Car</span>
             <i class="fa-solid fa-arrow-right"></i>
