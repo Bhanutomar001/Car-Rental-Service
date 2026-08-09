@@ -27,6 +27,12 @@ public class HomeController {
 
         @GetMapping("/carRegistration")
         public String showCarRegistrationPage() {
-            return "addCar";
+
+        return "addCar";
+        }
+
+        @GetMapping("/delete")
+      public String DeleteUserAccount(){
+        return "userDelete";
         }
 }

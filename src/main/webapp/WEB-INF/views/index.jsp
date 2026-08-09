@@ -101,7 +101,12 @@
 
         <a href="login" class="btn btn-login">Login Here</a>
 
+        <a href="delete"  class="btn btn-delete">Delete Your Account</a>
+
         <a href="carRegistration"  class="btn btn-carRegistration">Register Your Car</a>
+
+        <a href="carListOfUser"  class="btn btn-carListOfUser">Check User Car</a>
+
     </div>
 </div>
 
