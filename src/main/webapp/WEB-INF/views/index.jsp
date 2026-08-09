@@ -101,7 +101,7 @@
 
         <a href="login" class="btn btn-login">Login Here</a>
 
-
+        <a href="carRegistration"  class="btn btn-carRegistration">Register Your Car</a>
     </div>
 </div>
 

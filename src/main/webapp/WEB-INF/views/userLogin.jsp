@@ -120,7 +120,7 @@
         <div class="form-row">
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="example@gmail.com" required>
+                <input type="email" name="emailId" placeholder="example@gmail.com" required>
             </div>
             <div class="form-group">
                 <label>Password</label>
