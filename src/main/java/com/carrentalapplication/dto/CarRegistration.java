@@ -30,7 +30,4 @@ public class CarRegistration {
     public String driverNumber;
     public String driverAadhaar;
 
-
-
-
 }

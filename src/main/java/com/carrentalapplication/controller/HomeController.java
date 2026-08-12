@@ -1,7 +1,6 @@
 package com.carrentalapplication.controller;
 
-import com.carrentalapplication.service.SignupService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -32,7 +31,23 @@ public class HomeController {
         }
 
         @GetMapping("/delete")
-      public String DeleteUserAccount(){
+        public String DeleteUserAccount(){
         return "userDelete";
         }
+
+
+        @GetMapping("/carListOfUser")
+       public String checkcarListOfPerUser(){
+        return "checkUserCarList";
+        }
+
+    @GetMapping("/getAllCarList")
+    public String getAllCarList(){
+        System.out.println(1);
+
+
+
+        return "showAllRegCar";
+
+    }
 }
