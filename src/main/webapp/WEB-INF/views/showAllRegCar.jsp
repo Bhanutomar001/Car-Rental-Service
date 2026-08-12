@@ -146,6 +146,7 @@
                     <thead>
                         <tr>
                             <th>User ID</th>
+                            <th>Email Id</th>
                             <th>Brand</th>
                             <th>Model</th>
                             <th>Type</th>
@@ -168,7 +169,8 @@
                             <c:when test="${not empty allCarsList}">
                                 <c:forEach var="car" items="${allCarsList}">
                                     <tr>
-
+                                        <td class="fw-bold text-muted">${car.id}</td>
+                                          <td>${car.emailId}</td>
                                         <td class="fw-semibold">${car.carBrand}</td>
                                         <td>${car.modelName}</td>
                                         <td>${car.vehicleType}</td>

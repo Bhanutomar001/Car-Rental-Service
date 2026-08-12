@@ -29,5 +29,7 @@ public class CarRegistration {
     public String driverName;
     public String driverNumber;
     public String driverAadhaar;
+    public String emailId;
+
 
 }

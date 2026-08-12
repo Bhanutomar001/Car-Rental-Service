@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,6 +118,7 @@
         input[type="text"],
         input[type="number"],
         input[type="date"],
+        input[type="email"],
         select {
             width: 100%;
             padding: 12px 14px 12px 40px;
@@ -200,7 +200,7 @@
             <i class="fa-solid fa-car"></i> Basic Details
         </div>
 
-        <div class="grid-2">
+        <div class="grid-3">
             <div class="form-group">
                 <label for="carBrand">Car Brand</label>
                 <div class="input-wrapper">
@@ -214,6 +214,14 @@
                 <div class="input-wrapper">
                     <input type="text" id="modelName" name="modelName" placeholder="e.g. Creta, Swift" required>
                     <i class="fa-solid fa-car-side"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">User Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="user@example.com" required>
+                    <i class="fa-solid fa-envelope"></i>
                 </div>
             </div>
         </div>
@@ -370,6 +378,3 @@
 
 </body>
 </html>
-
-
-

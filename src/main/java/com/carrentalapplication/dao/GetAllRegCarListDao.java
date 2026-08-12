@@ -16,7 +16,8 @@ public class GetAllRegCarListDao {
     public List<CarRegistration> getAllRegCarsService(){
         System.out.println(5);
 
-        String query = "SELECT * FROM carinfo";
+        String query = "SELECT * FROM car_info";
+
         System.out.println(6);
 
         return jdbcTemplate.query(query, new CarRowMapper());

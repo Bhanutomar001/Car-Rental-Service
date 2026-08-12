@@ -26,7 +26,7 @@
         .card {
             background: #ffffff;
             width: 100%;
-            max-width: 500px;
+            max-width: 1100px; /* Expanded for full table width */
             padding: 35px 30px;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -116,7 +116,6 @@
             text-decoration: underline;
         }
 
-        /* Message & Table Styling */
         .error-msg {
             background-color: #f8d7da;
             color: #721c24;
@@ -128,39 +127,67 @@
             border: 1px solid #f5c6cb;
         }
 
+        /* Responsive Table styling for wide data view */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 25px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+
         .result-table {
             width: 100%;
-            margin-top: 25px;
             border-collapse: collapse;
+            white-space: nowrap;
         }
 
         .result-table th, .result-table td {
-            padding: 10px;
+            padding: 12px 14px;
             border: 1px solid #dee2e6;
             text-align: center;
-            font-size: 14px;
+            font-size: 13.5px;
         }
 
         .result-table th {
             background-color: #0d6efd;
             color: white;
-            font-weight: 500;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
         }
 
         .result-table tr:nth-child(even) {
             background-color: #f8f9fa;
         }
+
+        .badge-plate {
+            background-color: #212529;
+            color: #ffffff;
+            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-fuel {
+            background-color: #e7f1ff;
+            color: #0c63e4;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
-
+<form action="carList" method="post">
     <div class="card">
         <div class="card-header">
             <h2>Check Car List Of User</h2>
-            <p>Search cars by driver details or vehicle registration number</p>
+            <p>Search registered vehicles by driver details or phone number</p>
         </div>
 
-        <!-- Displays Error Message if no records found -->
+        <!-- Error Message Display -->
         <c:if test="${not empty errorMessage}">
             <div class="error-msg">
                 ${errorMessage}
@@ -169,42 +196,73 @@
 
         <form action="carList" method="post" autocomplete="off">
             <div class="form-group">
-                <label for="driverName">Check By Name</label>
-                <input type="text" id="driverName" name="driverName" placeholder="Enter Driver Name">
+                <label for="driverName">Check By Driver Name</label>
+                <input type="text" id="driverName" name="driverName" value="${param.driverName}" placeholder="Enter Driver Name">
             </div>
 
             <div class="form-group">
-                <label for="numberPlate">Check By Car Number</label>
-                <input type="text" id="numberPlate" name="numberPlate" placeholder="Enter Your Car Number">
+                <label for="emailId">Check By Driver Number / Email</label>
+                <input type="text" id="emailId" name="emailId" value="${param.emailId}" placeholder="Enter Driver Number or Email">
             </div>
 
             <button type="submit" class="btn-submit">Search Vehicle</button>
         </form>
 
-        <!-- Displays Result Table if carList is available -->
         <c:if test="${not empty carList}">
-            <table class="result-table">
-                <thead>
-                    <tr>
-                        <th>Driver Name</th>
-                        <th>Car Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <c:forEach var="car" items="${carList}">
+            <div class="table-responsive">
+                <table class="result-table">
+                    <thead>
                         <tr>
-                            <td>${car.driverName}</td>
-                            <td>${car.numberPlate}</td>
+                            <th>User ID</th>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th>Type</th>
+                            <th>Year</th>
+                            <th>Colour</th>
+                            <th>Fuel</th>
+                            <th>Transmission</th>
+                            <th>Seats</th>
+                            <th>Mileage</th>
+                            <th>Number Plate</th>
+                            <th>Insurance Date</th>
+                            <th>RC Number</th>
+                            <th>Driver Name</th>
+                            <th>Driver Number</th>
+                            <th>Driver Aadhaar</th>
+                            <th> Email Id</th>
                         </tr>
-                    </c:forEach>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="car" items="${carList}">
+                            <tr>
+                                <td><strong>${car.id}</strong></td>
+                                <td>${car.carBrand}</td>
+                                <td>${car.modelName}</td>
+                                <td>${car.vehicleType}</td>
+                                <td>${car.manufacturingYear}</td>
+                                <td>${car.colour}</td>
+                                <td><span class="badge-fuel">${car.fuelType}</span></td>
+                                <td>${car.transmissionType}</td>
+                                <td>${car.seatingCapacity}</td>
+                                <td>${car.mileage}</td>
+                                <td><span class="badge-plate">${car.numberPlate}</span></td>
+                                <td>${car.insuranceDate}</td>
+                                <td>${car.rcNumber}</td>
+                                <td style="color: #0d6efd; font-weight: 600;">${car.driverName}</td>
+                                <td>${car.driverNumber}</td>
+                                <td>${car.driverAadhaar}</td>
+                                <td>${car.emailId}</td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </c:if>
 
         <div class="form-footer">
             <a href="javascript:history.back()">← Back to Dashboard</a>
         </div>
     </div>
-
+</form>
 </body>
 </html>
